@@ -9,60 +9,46 @@
 	</head>
 	<body>
 		
-        <div class="container">
-            <div class="mb-1 bg-primary d-inline-block"></div>
-            <div class="row">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4">
-                    <form onSubmit="return handleClick()">
-                    <div class="form-group">
-                        <label for="formGroupExampleInput">Hours worked in week:</label>
-                        <input type="text" class="form-control" id="hoursFormInput" placeholder="37">
-                    </div>
-                    <div class="form-group">
-                        <label for="formGroupExampleInput2">Hourly rate of pay (USD):</label>
-                        <input type="text" class="form-control" id="payrateFormInput" placeholder="22.50">
-                    </div>
-                    <div class="form-group">
-                            <input class="btn btn-outline-primary" type="submit" value="Submit">
-                        </div>
-                    </form>
+    <div class="container">
+        <div class="mb-1 bg-primary d-inline-block"></div>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <form id="form1">
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Hours worked in week:</label>
+                    <input type="text" class="form-control" id="hoursFormInput" placeholder="hours">
                 </div>
-                <div class="col-sm-4"></div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Hourly rate of pay (USD):</label>
+                    <input type="text" class="form-control" id="payrateFormInput" placeholder="pay rate">
+                </div>
+                <div class="form-group">
+                        <input class="btn btn-outline-primary" id="clickMe" type="submit" value="Submit" onclick="doit()">
+                    </div>
+                </form>
             </div>
-            <div class="mb-1 bg-primary d-inline-block"></div>
+            <div class="col-sm-4"></div>
+        </div>
+        <div class="mb-1 bg-primary d-inline-block"></div>
 
-            <div class="row">
-                <div class="col-sm-4"></div>
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <div class="card-body">
-                              <h4 class="card-title">Moneys:</h4>
-                              <p class="card-text">
-                                
-                              </p>
-                            </div>
+        <div class="row">
+            <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Moneys:</h4>
+                            <p class="card-text">
+                            
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-    <script>
-        "use strict";
-
-        //let hours = 37;
-        //let payPerHour = 22.50;
-        //let totalPay = 37 * 22.50;
-        //console.log(totalPay);
-        
-        
-        function handleClick() {
-            let hours = document.getElementById("hoursFormInput").innerText;
-        console.log(hours);
-            console.log("hi");
-        }
-    </script>
+    </div>
+    
+    <script src="justdoit.js"></script>
 
 </body>
 </html>
