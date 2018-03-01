@@ -1,18 +1,35 @@
 "use strict";
 
-function doit() {
-    let hours = document.getElementById("hoursFormInput").value;
-    let pay = document.getElementById("payrateFormInput").value;
-    //console.log(hours * pay);
-    //let calculate = hours * pay;
-    //document.getElementById("card-text").value = calculate;
+function doMasterFunction() {
 
-    if (hours > 40) {
+    let maxWeeklyHours = 40;
+    let setHours;
+    let setPay;
+
+    setHours = getInput("hoursFormInput");
+    setPay = getInput("hoursFormInput");
+    
+    setPay = isOvertime(setHours, maxWeeklyHours);
+
+    setMoneyOutput("display-money", setPay);
+
+}
+
+function getInput(elementName) {
+    return  document.getElementById(elementName).value;
+}
+
+function isOvertime(hours, maxHours) {
+    if (hours > maxHours) {
         hours = hours * 1.5;
         console.log(hours);
     }
-
-    document.getElementById("display-money").innerHTML = hours * pay;
+    return hours;
 }
 
-    
+function setMoneyOutput(elementName, pay) {
+    document.getElementById(elementName).innerHTML = pay;
+    return;
+}
+
+doMasterFunction();
